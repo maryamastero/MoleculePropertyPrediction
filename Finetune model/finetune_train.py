@@ -69,7 +69,7 @@ def test_property_prediction(model, loader, criterion, device):
 
 
 print('load dataset')
-sdf_file_train ='Zinc_dataset/zinc_250k_std_test.sdf' 
+sdf_file_train ='Zinc_dataset/zinc_250k_std_training.sdf' 
 sdf_file_test ='Zinc_dataset/zinc_250k_std_validation.sdf' 
 
 train_dataset = MoleculeDataset(sdf_file_train)
