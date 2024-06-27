@@ -1,0 +1,52 @@
+To run the setup_env.sh:
+Navigate to the directory where you saved setup_env.sh
+Make the script executable by running: chmod +x setup_env.sh
+Run the Script: ./setup_env.sh
+
+To verify that the libraries are properly installed in your conda environment
+
+conda activate myenv
+python
+
+try:
+    import torch
+    print("PyTorch version:", torch.__version__)
+except ImportError:
+    print("PyTorch is not installed")
+
+try:
+    import torch_geometric
+    print("PyTorch Geometric version:", torch_geometric.__version__)
+except ImportError:
+    print("PyTorch Geometric is not installed")
+
+try:
+    import rdkit
+    from rdkit import Chem
+    print("RDKit version:", rdkit.__version__)
+except ImportError:
+    print("RDKit is not installed")
+
+try:
+    import mlflow
+    print("MLflow version:", mlflow.__version__)
+except ImportError:
+    print("MLflow is not installed")
+
+try:
+    import streamlit
+    print("Streamlit version:", streamlit.__version__)
+except ImportError:
+    print("Streamlit is not installed")
+try:
+    import fastai
+    print("fastai version:", fastai.__version__)
+except ImportError:
+    print("fastai is not installed")
+
+
+To get a list of all conda environments and remove the environment:
+conda env list
+
+
+conda env remove -n myenv
